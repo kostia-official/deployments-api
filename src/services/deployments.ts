@@ -1,4 +1,4 @@
-import { DeploymentsModel, IDeployment, IDeploymentInput } from '../models/deploymentsModel';
+import { DeploymentsModel, IDeployment, IDeploymentInput } from '../models/deployments';
 
 class DeploymentsService {
   async find(): Promise<IDeployment[]> {

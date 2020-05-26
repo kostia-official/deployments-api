@@ -1,6 +1,6 @@
 import app from '../../src/app';
 import supertest from 'supertest';
-import { IDeploymentInput, IDeployment, DeploymentsModel } from '../../src/models/deploymentsModel';
+import { IDeploymentInput, IDeployment, DeploymentsModel } from '../../src/models/deployments';
 import mongoose from 'mongoose';
 
 const request = supertest(app);

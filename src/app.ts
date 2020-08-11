@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import * as db from './database';
 import deployments from './controllers/deployments';
@@ -11,5 +11,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/deployments', deployments);
 app.use('/templates', templates);
+app.use('/test', (req: Request, res: Response) => {
+  console.log(req.headers);
+  console.log(req.rawHeaders);
+  res.send(404);
+});
 
 export default app;
